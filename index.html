@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>Запрошення</title> 
+        <style> 
+            body { 
+                background-color: #F0F8FF; 
+                text-align: center; 
+                font-family: Arial, sans-serif; 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                flex-direction: column;
+            }
+
+            h1, h2, p, img { 
+                display: none; /* Спочатку приховуємо весь контент */
+            }
+
+            /* From Uiverse.io by alexreyes091 */
+            .btn {
+                padding: 1rem 2rem;
+                font-weight: 700;
+                background: rgb(255, 255, 255);
+                color: blueviolet;
+                cursor: pointer;
+                border-radius: 0.5rem;
+                border-bottom: 2px solid blueviolet;
+                border-right: 2px solid blueviolet;
+                border-top: 2px solid white;
+                border-left: 2px solid white;
+                transition-duration: 1s;
+                transition-property: border-top, border-left, border-bottom, border-right, box-shadow;
+                font-size: 2vw; /* Встановлюємо розмір шрифту в залежності від ширини екрану */
+                min-width: 200px; /* Мінімальна ширина кнопки */
+            }
+
+            .btn:hover {
+                border-top: 2px solid blueviolet;
+                border-left: 2px solid blueviolet;
+                border-bottom: 2px solid rgb(238, 103, 238);
+                border-right: 2px solid rgb(238, 103, 238);
+                box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
+            }
+
+            /* Медіа-запит для мобільних пристроїв */
+            @media (max-width: 600px) {
+                .btn {
+                    font-size: 5vw; /* Зменшуємо розмір кнопки для мобільних */
+                    padding: 1rem 2rem;
+                }
+            }
+
+            /* Стиль для абзацу, щоб не змінювати його розмір */
+            p { 
+                font-size: 24px; 
+                color: #444; 
+                max-width: 800px; 
+                margin: 0 auto 20px; 
+                line-height: 1.6; 
+                display: none; /* Спочатку приховуємо */
+            }
+
+        </style> 
+    </head> 
+    <body> 
+        <button class="btn" onclick="showContent()">Натисни</button>
+
+        <h1>Миле нагадування ✨</h1> 
+        <p>Шановна Ірино Володимирівно, запрошуємо вас відвідати заняття з фізичної культури,  
+            яке відбудеться 14 березня о 12:20 у ФОКу. Ми дуже сумуємо за вами, вашою  
+            енергією, обіймами та теплою атмосферою, яку ви завжди створюєте.  
+            Будемо раді вас бачити!</p> 
+        <img 
+            src="котіки.jpg" 
+            alt="котіки Photo" 
+        />
+
+        <script>
+            function showContent() {
+                document.querySelector('.btn').style.display = 'none';  // Приховуємо кнопку після натискання
+                document.querySelector('h1').style.display = 'block';    // Показуємо заголовок
+                document.querySelector('p').style.display = 'block';     // Показуємо текст
+                document.querySelector('img').style.display = 'block';   // Показуємо зображення
+            }
+        </script>
+    </body> 
+</html>
